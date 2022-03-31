@@ -24,6 +24,7 @@ return {
 		useit	 = DbOption.new():setValue(true),
 		dontuseit = DbOption.new():setValue(false),
 		J11a_enabled = DbOption.new():setValue(true):checkbox(),
+		J11b_enabled = DbOption.new():setValue(true):checkbox(),
 		Mig29a_enabled = DbOption.new():setValue(true):checkbox(),
 		Mig29g_enabled = DbOption.new():setValue(true):checkbox(),
 		Mig29s_enabled = DbOption.new():setValue(true):checkbox(),

@@ -1,7 +1,7 @@
 
 local  aircraft = get_aircraft_type()
 
-if      aircraft=="Su-27"or aircraft=="J-11A"   then
+if      aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B"   then
     shape_name		   = "SU-27-CLICKABLE"
 elseif  aircraft=="Su-33"                       then
     shape_name		   = "SU-33-CLICKABLE"
@@ -15,7 +15,7 @@ end
 
 local controllers = LoRegisterPanelControls()
 
-if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
+if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
 THROTTLE_L_PNTS						= CreateGauge("parameter")
 THROTTLE_L_PNTS.arg_number			= 1
 THROTTLE_L_PNTS.input				= {0,1}

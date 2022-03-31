@@ -131,7 +131,7 @@ elements["PNT_NAVPROGRAM"]          = default_axis_limited("导航模式",      
 end
     
 
-if  aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A"   then
+if  aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B"   then
 elements["PNT_AUTO_RESET"]          = default_button("自动驾驶仪复位",                                     devices.CLICKABLE,  device_commands.CLIC_AUTO_STOP     )
 elements["PNT_FUEL_DUMP"]           = default_2_position_tumb("排放燃料",                                  devices.CLICKABLE,  device_commands.CLIC_FUEL_DUMP_ON  )
 elements["PNT_FLAPS_UP"]            = default_button("襟翼上升",                                            devices.CLICKABLE,  device_commands.CLIC_FLAPS_UP      )
@@ -173,7 +173,7 @@ elements["PNT_NAVPROGRAM"]          = default_axis_limited("导航模式",      
 
 
 end
-if  aircraft=="Su-27"or aircraft=="J-11A"   then
+if  aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B"   then
 elements["PNT_CHUTE_DEP"]           = default_button("降落伞展开",                                devices.CLICKABLE,  device_commands.CLIC_CHUTE_DEP    )  
 elements["PNT_CHUTE_REL"]           = default_button("降落伞释放",                                   devices.CLICKABLE,  device_commands.CLIC_CHUTE_REL    )  
 elements["PNT_AA_MODES_STICK"]      = default_button("AA模式选择",                                     devices.CLICKABLE,  device_commands.CLIC_MODE_AA       )

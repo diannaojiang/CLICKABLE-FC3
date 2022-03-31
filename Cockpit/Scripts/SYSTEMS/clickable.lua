@@ -39,7 +39,7 @@ end
 function detect_aircraft_type(aircraft)
     
     
-    if aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" then
+    if aircraft=="Su-33" or aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" then
     return true
     else
     return false
@@ -234,7 +234,7 @@ function SetCommand(command,value)
 
 
 
-    if aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
+    if aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T" then
         
         if command == device_commands.CLIC_CHUTE_DEP then	
             if value == 1 then

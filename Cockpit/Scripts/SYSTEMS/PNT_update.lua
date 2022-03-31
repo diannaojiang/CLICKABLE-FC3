@@ -2,7 +2,7 @@ dt = 0.0001
 make_default_activity(dt)
 local  aircraft = get_aircraft_type()
 
-if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T"then
+if   aircraft=="Su-33"or   aircraft=="Su-27"or aircraft=="J-11A"or aircraft=="J-11B" or aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" or aircraft=="Su-25T"then
 
 
 local PNT_AIRBRAKE 			= nil

@@ -41,7 +41,14 @@ add_plugin_systems('CLICKABLE-FC3_Module','*',path,
 	["MiG-29A"] 			= {enable_options_key_for_unit = 'Mig29a_enabled'},
 	["MiG-29G"] 			= {enable_options_key_for_unit = 'Mig29g_enabled'},
 	["MiG-29S"] 			= {enable_options_key_for_unit = 'Mig29s_enabled'},
-	
+	--Diannao Implemented
+	["J-16 07 Batch"]		= {enable_options_key_for_unit='dontuseit'},
+	["J-11D"]				= {enable_options_key_for_unit='dontuseit'},
+	["J-15"]				= {enable_options_key_for_unit='dontuseit'},
+	["J-11B"]				= {enable_options_key_for_unit='J11b_enabled'},
+	["J-7D"]				= {enable_options_key_for_unit='dontuseit'},
+	["J-20"]				= {enable_options_key_for_unit='dontuseit'},
+	["J-20B"]				= {enable_options_key_for_unit='dontuseit'},
 	--Not yet implemented
 	["F-15C"]				= {enable_options_key_for_unit='dontuseit'},
 	["A-10A"]				= {enable_options_key_for_unit='dontuseit'},	--Which version ?

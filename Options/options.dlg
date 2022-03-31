@@ -74,6 +74,29 @@ dialog = {
 					},
 					["type"] = "CheckBox",
 				},
+				["J11b_enabledCheckbox"] = {
+					["params"] = {
+						["bounds"] = {
+							["h"] = 18,
+							["w"] = 125,
+							["x"] = 100,
+							["y"] = 180,
+						},
+						["enabled"] = true,
+						["state"] = true,
+						["tabOrder"] = 0,
+						["text"] = "J-11A",
+						["tooltip"] = "",
+						["visible"] = true,
+						["zindex"] = 0,
+					},
+					["skin"] = {
+						["params"] = {
+							["name"] = "checkBoxSkin_options",
+						},
+					},
+					["type"] = "CheckBox",
+				},
 				["Su33_enabledCheckbox"] = {
 					["params"] = {
 						["bounds"] = {
