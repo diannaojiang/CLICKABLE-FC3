@@ -40,7 +40,6 @@ elements["PNT_NAVLIGHT"]            = default_button("导航灯",               
 elements["PNT_JETTINSON"]           = default_button("武器投掷",                                    devices.CLICKABLE,  device_commands.CLIC_JETTINSON     )  
 elements["PNT_JETTINSON_EMER"]      = default_button("紧急弃置",                                  devices.CLICKABLE,  device_commands.CLIC_JETTINSON_EMER)  
 elements["PNT_HUD_COL"]             = default_button("HUD颜色",                                           devices.CLICKABLE,  device_commands.CLIC_HUD_COLOR     )
-elements["PNT_MODE"]                = default_axis_limited("主模式选择",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
 elements["PNT_EMERGENCY_BRAKE"]     = default_button("紧急制动",                                     devices.CLICKABLE,  device_commands.CLIC_EMER_BRAKE    )     
 elements["PNT_NOSE_WHEEL"]          = default_button("鼻轮转向",                                 devices.CLICKABLE,  device_commands.CLIC_NOSE_WHEEL    )     
 elements["PNT_EJECT"]               = default_button("弹射（3次）",                                     devices.CLICKABLE,  device_commands.CLIC_EJECT         )  
@@ -80,6 +79,7 @@ elements["PNT_TV_NIGHT"]            = default_button("微光电视夜视 开/关
 elements["PNT_RADAR"]               = default_button("ELINT吊舱 开/关",                                    devices.CLICKABLE,  device_commands.CLIC_RADAR_ON_OFF  )
 elements["PNT_NAVPROGRAM"]          = default_button("导航模式",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
 elements["PNT_ZOOM"]                = default_axis_limited("显示屏 放大/缩小",                           devices.CLICKABLE,  device_commands.CLIC_ZOOM,nil, 0, 1,true,true)
+elements["PNT_MODE"]                = default_axis_limited("主模式选择",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
 end
 
 if  aircraft=="MiG-29A"or aircraft=="MiG-29G"or aircraft=="MiG-29S" then
@@ -116,6 +116,7 @@ elements["PNT_DSP_ZOOMOUT"]         = default_button("显示缩小",		          
 elements["PNT_LIGHT"]               = default_button("驾驶舱照明",                                devices.CLICKABLE,  device_commands.CLIC_COCKPITLIGHT  )  
 elements["PNT_CTM"]                 = default_button("反制措施持续释放",               devices.CLICKABLE,  device_commands.CLIC_CTM           )
 elements["PNT_NAVPROGRAM"]          = default_axis_limited("导航模式",                              devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
+elements["PNT_MODE"]                = default_axis_limited("主模式选择",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
 end
     
 
@@ -153,6 +154,7 @@ elements["PNT_LIGHT"]               = default_button("驾驶舱照明",         
 elements["PNT_CTM"]                 = default_button("反制措施持续释放",               devices.CLICKABLE,  device_commands.CLIC_CTM           )
 elements["PNT_LANDING_LIGHTS"]      = default_button("前轮灯 近/远/关闭",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
 elements["PNT_NAVPROGRAM"]          = default_axis_limited("导航模式",                              devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
+elements["PNT_MODE"]                = default_axis_limited("主模式选择",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
 
 
                                                                                                                               
@@ -184,7 +186,39 @@ elements["PNT_WINGS_F"]             = default_button("折叠机翼",            
 elements["PNT_AA_MODES_STICK"]      = default_button("AA模式选择",                                     devices.CLICKABLE,  device_commands.CLIC_MODE_AA       )
 
 end
+--[Su-25] Specifics
+if  aircraft=="Su-25"                       then
+elements["PNT_RIPPLE_INT"]          = default_axis_limited("Ripple Interval Increase/Decrease",             devices.CLICKABLE,  device_commands.CLIC_RIPPLE_INT    )
+elements["PNT_RIPPLE_QT"]           = default_button("Ripple Quantity Select/SPPU select",                  devices.CLICKABLE,  device_commands.CLIC_RIPPLE_QT     )
+elements["PNT_CUT_BURST"]           = default_button("Cut Of Burst select",                                 devices.CLICKABLE,  device_commands.CLIC_CUTBURST      )
+elements["PNT_LANDING_LIGHTS"]      = default_button("Gear Light Near/Far/Off",                             devices.CLICKABLE,  device_commands.CLIC_LANDING_LIGHTS)
+elements["PNT_JETTINSON_TANK"]      = default_button("Fuel Tanks Jettison",                                 devices.CLICKABLE,  device_commands.CLIC_JETTINSON_TANK)
+elements["PNT_CHUTE"]               = default_button("Parachute Deployment/Release",                        devices.CLICKABLE,  device_commands.CLIC_CHUTE         )  
+--elements["PNT_CTM_CHAFF"]           = default_button("Countermeasures Chaff Dispense",                      devices.CLICKABLE,  device_commands.CLIC_CTM_CHAFF     )
+--elements["PNT_CTM_FLARE"]           = default_button("Countermeasures Flares Dispense",                     devices.CLICKABLE,  device_commands.CLIC_CTM_FLARE     )
+elements["PNT_FLAPS_MULTI"]         = default_button("Flaps Up/Down",                                       devices.CLICKABLE,  device_commands.CLIC_FLAPS_MULTI   )
+elements["PNT_FLAPS_LAND"]          = default_button("Flaps Landing Position",                              devices.CLICKABLE,  device_commands.CLIC_FLAPS_LAND    )
+elements["PNT_ASP-17"]              = default_axis_limited("ASP-17 Glass Up/Down",                          devices.CLICKABLE,  device_commands.CLIC_ASP           )
+--elements["PNT_FLAPS_MULTI_BIS"]     = default_button("Flaps Up/Down",                                       devices.CLICKABLE,  device_commands.CLIC_FLAPS_MULTI   )
+--elements["PNT_AIRBRAKE"]            = default_button("Airbrake",                                            devices.CLICKABLE,  device_commands.CLIC_AIRBRAKE      )
+elements["PNT_NAVPROGRAM"]          = default_button("Navigation Modes",                                    devices.CLICKABLE,  device_commands.CLIC_NAVMODES      )  
+elements["PNT_CTM_ONCE"]            = default_button("Countermeasures Dispense",                            devices.CLICKABLE,  device_commands.CLIC_CTM_ONCE      )
+elements["PNT_CTM"]                 = default_button("Countermeasures Continuously Dispense",               devices.CLICKABLE,  device_commands.CLIC_CTM           )
+elements["PNT_LASER"]               = default_button("Laser Ranger On/Off",                                 devices.CLICKABLE,  device_commands.CLIC_LASER        )
+elements["PNT_LASER_FRONT"]         = default_button("Laser Ranger On/Off",                                 devices.CLICKABLE,  Keys.iCommandPlaneLaserRangerOnOff         )
+elements["PNT_LASER_FRONT"].stop_action        = nil
+elements["PNT_GRID"]                = default_button("Gunsight Reticle Switch",                             devices.CLICKABLE,  device_commands.CLIC_GRID          )
+elements["PNT_MIRROR_L"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
+elements["PNT_MIRROR_R"]            = default_button("Toggle Mirrors",                                      devices.CLICKABLE,  device_commands.CLIC_MIRROR        )
 
 
+elements["PNT_TARGET_UD"]           = default_axis_limited("Target Designator Up/Down",                     devices.CLICKABLE,  device_commands.CLIC_TARGET_UD,0,0,100/15,false, false, {-1,1})
+elements["PNT_TARGET_UD"].cycle = false
+elements["PNT_TARGET_LR"]           = default_axis_limited("Target Designator Left/Right",                  devices.CLICKABLE,  device_commands.CLIC_TARGET_LR,0,0,100/15,false, false, {-1,1})
+elements["PNT_TARGET_LR"].cycle = false
+elements["PNT_MODE"]                = default_axis_limited("Master Modes Select",                           devices.CLICKABLE,  device_commands.CLIC_MODE)
+elements["PNT_UNLOCK"]              = default_button("Target Unlock",                                       devices.CLICKABLE,  device_commands.CLIC_LOCK_REL      )
+elements["PNT_LOCK"]                = default_button("Target Lock",                                         devices.CLICKABLE,  device_commands.CLIC_LOCK          )
 
+end
 
